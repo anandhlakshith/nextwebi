@@ -159,14 +159,12 @@ body {
 .myNavbar .navbar-nav .nav-link {
     font-family: "Montserrat_regular";
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
+    color: #fff;
 }
 
 .myNavbar.navbar-dark .navbar-nav .nav-link {
     color: #fff;
-    font-family: "Montserrat_regular";
-    font-weight: 700;
-    font-size: 12px;
 }
 
 .navbar .dropdown-toggle::after {
@@ -1707,27 +1705,70 @@ body {
 }
 
 @media (min-width:992px) and (max-width:1199.98px) and (orientation:landscape) {
+
     /* Laptop Landscape Styles */
+    .heroSlideContent h1 {
+        font-size: 40px;
+    }
+
+    .heroSlideContent p {
+        font-size: 18px;
+    }
+
+    .offshore_content h1 {
+        font-size: 26px;
+        line-height: 35px;
+    }
+
+    .offshore_content p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .contentHead {
+        font-size: 34px;
+        line-height: 35px;
+    }
+
+    .contentDescription {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .contact_HeadLine {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .contentFormDescription{
+        font-size: 18px;
+    }
+    .outputDriven1_content h1, .outputDriven2_header h1{
+        font-size: 32px;
+    }
+    .outputDriven2_header{
+        padding-right: 10%;
+    }
+    .about_head{
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .ideacontent h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 
 /* -------------------------------------------------------------
      Large Screens / Desktops (Landscape Only)
   ------------------------------------------------------------- */
 @media (min-width:1200px) and (orientation:landscape) {
-    /* Large Desktop Landscape Styles */
-    /* .outputDriven2_cardSection .card {
-    min-height:auto;
-}
-*/
 
+    /* Large Desktop Landscape Styles */
     .requestQuoteContainer {
         width: 50%;
     }
 
-    .requestQuoteTxt {}
-}
-
-/* Optional:Only include if you expect rotated portrait monitors */
-@media (min-width:1200px) and (orientation:portrait) {
-    /* Large Desktop Portrait Styles (rare use) */
+    .myNavbar .navbar-nav .nav-link {
+        margin: 0 .5em;
+    }
 }
