@@ -66,3 +66,41 @@ window.addEventListener('scroll',
             navbar.classList.add('bg-transparent', 'navbar-dark');
         }
     });
+
+
+// ------- count increase animation on scroll ------
+$(function () {
+    let animated = false;
+  
+    function animateNumbers() {
+      $(".stat-number").each(function () {
+        const $el = $(this);
+        const target = parseInt($el.data("n"), 10);
+        const suffix = $el.data("sym") || "";
+  
+        $({ count: 0 }).animate({ count: target }, {
+          duration: 5000,
+          step: function (now) {
+            $el.text(Math.ceil(now) + suffix);
+          },
+          complete: function () {
+            $el.text(target + suffix);
+          }
+        });
+      });
+    }
+  
+    function checkScrollTrigger() {
+      const sectionTop = $("#aboutSection").offset().top;
+      const scrollTop = $(window).scrollTop();
+  
+      if (!animated && scrollTop >= sectionTop) {
+        animated = true;
+        animateNumbers();
+      }
+    }
+  
+    $(window).on("scroll", checkScrollTrigger);
+  });
+  
+  
